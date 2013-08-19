@@ -14,7 +14,8 @@
                 <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>                   
+                    
                 </ul>
             </div>
             <form class="form-horizontal" action="login" method="POST">
