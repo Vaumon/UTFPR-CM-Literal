@@ -7,7 +7,7 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     </head>
-    <body>
+    <body background="img/background.jpg">
         <div class="navbar navbar-inverse">
             <div class="navbar-inner">
                 <a class="brand" href="#">Title</a>
@@ -17,17 +17,17 @@
                     <li><a href="#">Link</a></li>
                 </ul>
             </div>
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="login" method="POST">
                 <div class="control-group">
                     <label class="control-label" for="inputEmail">Email</label>
                     <div class="controls">
-                        <input type="text" id="inputEmail" placeholder="Email">
+                        <input type="text" id="userName" placeholder="Email">
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="inputPassword">Password</label>
                     <div class="controls">
-                        <input type="password" id="inputPassword" placeholder="Password">
+                        <input type="password" id="password" placeholder="Password">
                     </div>
                 </div>
                 <div class="control-group">

@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
-        <img src="img/background.jpg" class="img-rounded">
+    <body background="img/background.jpg">
+       Welcome Mother Fucker!
     </body>
 </html>
