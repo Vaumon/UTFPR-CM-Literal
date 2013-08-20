@@ -18,15 +18,15 @@
                     
                 </ul>
             </div>
-            <form class="form-horizontal" action="login" method="POST">
+            <form class="form-horizontal" action="Teste" method="POST">
                 <div class="control-group">
-                    <label class="control-label" for="inputEmail">Email</label>
+                    <label class="control-label" for="inputEmail">Login</label>
                     <div class="controls">
-                        <input type="text" id="userName" placeholder="Email">
+                        <input type="text" id="userName" placeholder="Login">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="inputPassword">Password</label>
+                    <label class="control-label" for="inputPassword">Senha</label>
                     <div class="controls">
                         <input type="password" id="password" placeholder="Password">
                     </div>
@@ -34,9 +34,9 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="checkbox">
-                            <input type="checkbox"> Remember me
+                            <input type="checkbox"> Salvar Informações
                         </label>
-                        <button type="submit" class="btn">Sign in</button>
+                        <button type="submit" class="btn">Entrar</button>
                     </div>
                 </div>
             </form>
