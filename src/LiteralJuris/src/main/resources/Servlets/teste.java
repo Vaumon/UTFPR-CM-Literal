@@ -32,21 +32,6 @@ public class teste extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet teste</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet teste at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {            
-            out.close();
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -78,8 +63,12 @@ public class teste extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        request.getAttribute(null);
-        response.sendRedirect(null);
+        if (request.getParameter("userName").equals("admin") && request.getParameter("password").equals("admin")) {
+            response.sendRedirect("home.jsp");
+        } else {
+            response.sendRedirect("login.jsp");
+        }
+
     }
 
     /**

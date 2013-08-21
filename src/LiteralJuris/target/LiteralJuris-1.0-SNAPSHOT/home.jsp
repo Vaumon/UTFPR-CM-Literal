@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body background="img/background.jpg">
-       Welcome Mother Fucker!
+       Welcome Mother Fucker =D!
     </body>
 </html>
