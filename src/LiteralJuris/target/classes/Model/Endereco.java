@@ -24,6 +24,8 @@ public class Endereco implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)        
     long id;
+    @OneToOne(mappedBy = "endereco")
+    private Usuario Endereco;
 
     public Endereco() {
     }

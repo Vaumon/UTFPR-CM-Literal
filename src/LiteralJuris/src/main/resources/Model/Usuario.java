@@ -1,6 +1,7 @@
 package Model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,18 +14,23 @@ import javax.persistence.OneToOne;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author a1265067
  */
 @Entity
 public class Usuario implements Serializable {
+
     String nome, email, senha, telefone;
-    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
+    @OneToOne
+    Endereco endereco;
+    @ManyToOne
+    Nivel nivel;
+    @OneToMany(mappedBy = "usuario")
+    List<Arquivo> arquivos;
 
     public Usuario() {
     }
@@ -77,14 +83,6 @@ public class Usuario implements Serializable {
         this.nivel = nivel;
     }
 
-    public Arquivo getArquivo() {
-        return arquivo;
-    }
-
-    public void setArquivo(Arquivo arquivo) {
-        this.arquivo = arquivo;
-    }
-
     public Long getID() {
         return ID;
     }
@@ -93,10 +91,16 @@ public class Usuario implements Serializable {
         this.ID = ID;
     }
 
+    public List<Arquivo> getArquivos() {
+        return arquivos;
+    }
+
+    public void setArquivos(List<Arquivo> arquivos) {
+        this.arquivos = arquivos;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" + "nome=" + nome + ", email=" + email + ", ID=" + ID + '}';
     }
-    
-    
 }
