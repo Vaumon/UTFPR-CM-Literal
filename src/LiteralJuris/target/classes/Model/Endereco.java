@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 /*
  * To change this template, choose Tools | Templates
@@ -18,14 +17,10 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class Endereco implements Serializable {
-    String rua, numero, bairro, cidade, UF;
-    @OneToOne
-    Usuario usuario;
+    String rua, numero, bairro, cidade, UF;    
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)        
-    long id;
-    @OneToOne(mappedBy = "endereco")
-    private Usuario Endereco;
+    @GeneratedValue(strategy = GenerationType.AUTO)      
+    long id;    
 
     public Endereco() {
     }
@@ -70,13 +65,6 @@ public class Endereco implements Serializable {
         this.UF = UF;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
 
     public long getId() {
         return id;
@@ -88,7 +76,7 @@ public class Endereco implements Serializable {
 
     @Override
     public String toString() {
-        return "Endereco{" + "rua=" + rua + ", cidade=" + cidade + ", usuario=" + usuario + ", id=" + id + '}';
+        return "Endereco{" + "rua=" + rua + ", cidade=" + cidade +'}';
     }
     
     

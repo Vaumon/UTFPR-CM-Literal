@@ -2,8 +2,9 @@ package Model;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 /*
  * To change this template, choose Tools | Templates
@@ -17,14 +18,23 @@ import javax.persistence.OneToOne;
 public class Nivel implements Serializable {
 
     @Id
-    private Long ID;
-    Enum administrador, admUsuario, assitenteUsuario;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    long id;
+    String nivel;
 
-    public Long getID() {
-        return ID;
+    public Nivel() {
+    }    
+
+    public String getNivel() {
+        return nivel;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
+    
+
+    public Long getID() {
+        return id;
     }
 }
